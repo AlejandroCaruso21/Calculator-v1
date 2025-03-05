@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Online</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Login -->
+    <div id="loginSection">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" id="nombre" placeholder="Nombre"><br>
+        <input type="text" id="apellido" placeholder="Apellido"><br>
+        <input type="text" id="telefono" placeholder="Teléfono"><br>
+        <input type="text" id="dni" placeholder="DNI"><br>
+        <input type="email" id="correo" placeholder="Correo"><br>
+        <button onclick="submitLogin()">Enviar Solicitud</button>
+    </div>
 
+    <!-- Espera -->
+    <div id="pendingSection" class="hidden">
+        <h2>Esperando Aprobación</h2>
+        <p>Tu solicitud está en revisión.</p>
+    </div>
+
+    <!-- Menú y Calculadora -->
+    <div id="menuSection" class="hidden">
+        <h2>Menú de Calculadoras</h2>
+        <ul>
+            <li onclick="showCalculator('IMC')">Calculadora de IMC</li>
+        </ul>
+        <div id="calculatorDisplay" class="hidden">
+            <h3 id="calculatorTitle"></h3>
+            <div id="calculatorContent"></div>
+        </div>
+    </div>
+
+    <!-- Historial -->
+    <div id="historySection" class="hidden">
+        <h2>Historial</h2>
+        <ul id="historyList"></ul>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
